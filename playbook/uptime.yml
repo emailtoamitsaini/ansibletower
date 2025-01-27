@@ -4,4 +4,6 @@
   become_user: tower
   tasks:
     - command: uptime
-  
+      register: uptime_result
+    - debug:
+         var: uptime_result
